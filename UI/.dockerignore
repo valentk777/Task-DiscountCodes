@@ -1,0 +1,10 @@
+**/.yarn.lock
+**/.yarn
+**/test-report.xml
+**/.git
+**/.gitignore
+**/integration_tests/*
+**/node_modules/*
+**/Dockerfile
+**/docker-compose.yml
+**/dist/*

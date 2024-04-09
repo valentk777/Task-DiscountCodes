@@ -1,0 +1,10 @@
+<Project>
+
+    <PropertyGroup>
+        <PackageId>$(ProjectName)</PackageId>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/valentk777/Task-DiscountCodes.git</RepositoryUrl>
+        <NuspecProperties>version=$(Version);configuration=$(Configuration);commit=$(commit);branch=$(branch)</NuspecProperties>
+    </PropertyGroup>
+
+</Project>

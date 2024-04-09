@@ -1,0 +1,8 @@
+version: "3"
+services:
+  discount-codes:
+    build:
+      context: .
+    ports:
+      - "11111:11111"
+      - "11111"

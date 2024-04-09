@@ -1,0 +1,22 @@
+<Project>
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <!--<TreatWarningsAsErrors>true</TreatWarningsAsErrors>-->
+        <WarningLevel>4</WarningLevel>
+        <Authors>Valentinas Kaminskas</Authors>
+        <Copyright>valentk777</Copyright>
+        <IsPackable>false</IsPackable>
+        <NoWarn>1701;1702;CA2254</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="SonarAnalyzer.CSharp" Version="9.23.1.88495">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+version: "3.4"
+
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: ./DockerfileDev
+      # args:
+      #   - env=production
+      #   - env=development
+    ports:
+      - "8089:8089"
+    # volumes:
+    #   - .:/app
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    command: npm run serve
+
+  localprod:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    ports:
+      - "81:80"
+    # environment:
+    #   - GENERATE_SOURCEMAP=false

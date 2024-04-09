@@ -1,0 +1,91 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{57427BC0-A9C2-4B2B-8EF7-3F77D2D48615}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3DBED6CE-0C2B-491D-BFF8-C043A76FE08B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.SignalR", "Source\DiscountCodes.SignalR\DiscountCodes.SignalR.csproj", "{2AC20230-7094-487A-A37C-4A7CC3C7A450}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.Application", "Source\DiscountCodes.Application\DiscountCodes.Application.csproj", "{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.Domain", "Source\DiscountCodes.Domain\DiscountCodes.Domain.csproj", "{6DD76798-8274-4FBE-AF31-829C187E3F57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.Integrations", "Source\DiscountCodes.Integrations\DiscountCodes.Integrations.csproj", "{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.Domain.UnitTests", "Tests\DiscountCodes.Domain.UnitTests\DiscountCodes.Domain.UnitTests.csproj", "{5F2B1070-2360-4239-89EE-43B7F871C579}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountCodes.IntegrationTests", "Tests\DiscountCodes.Domain.IntegrationTests\DiscountCodes.IntegrationTests.csproj", "{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{968C8515-B4FB-427B-AE58-86B3A0331BC2}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		.gitignore = .gitignore
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		README.md = README.md
+		shared-api.props = shared-api.props
+		shared-tests.props = shared-tests.props
+		shared.props = shared.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Github", "Github", "{70F5CC3B-58BB-4B59-8F1A-130996872FA6}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main-ci-cd.yml = .github\workflows\main-ci-cd.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Unit", "Unit", "{AAA25931-F59B-45E2-9C4C-A41358564DAE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{E35A5EFB-17F5-4256-8E43-C077A00D24E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2AC20230-7094-487A-A37C-4A7CC3C7A450}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AC20230-7094-487A-A37C-4A7CC3C7A450}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AC20230-7094-487A-A37C-4A7CC3C7A450}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AC20230-7094-487A-A37C-4A7CC3C7A450}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DD76798-8274-4FBE-AF31-829C187E3F57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DD76798-8274-4FBE-AF31-829C187E3F57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DD76798-8274-4FBE-AF31-829C187E3F57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DD76798-8274-4FBE-AF31-829C187E3F57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F2B1070-2360-4239-89EE-43B7F871C579}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F2B1070-2360-4239-89EE-43B7F871C579}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F2B1070-2360-4239-89EE-43B7F871C579}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F2B1070-2360-4239-89EE-43B7F871C579}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2AC20230-7094-487A-A37C-4A7CC3C7A450} = {57427BC0-A9C2-4B2B-8EF7-3F77D2D48615}
+		{9A406C8F-C7EF-4803-BA0C-4A7D69202AF8} = {57427BC0-A9C2-4B2B-8EF7-3F77D2D48615}
+		{6DD76798-8274-4FBE-AF31-829C187E3F57} = {57427BC0-A9C2-4B2B-8EF7-3F77D2D48615}
+		{FC1BD5EB-ED5B-42F4-9015-E2B40F26B354} = {57427BC0-A9C2-4B2B-8EF7-3F77D2D48615}
+		{5F2B1070-2360-4239-89EE-43B7F871C579} = {AAA25931-F59B-45E2-9C4C-A41358564DAE}
+		{BF5BAEC0-FE81-4D4B-941B-0EFC2A4C84A3} = {E35A5EFB-17F5-4256-8E43-C077A00D24E4}
+		{70F5CC3B-58BB-4B59-8F1A-130996872FA6} = {968C8515-B4FB-427B-AE58-86B3A0331BC2}
+		{AAA25931-F59B-45E2-9C4C-A41358564DAE} = {3DBED6CE-0C2B-491D-BFF8-C043A76FE08B}
+		{E35A5EFB-17F5-4256-8E43-C077A00D24E4} = {3DBED6CE-0C2B-491D-BFF8-C043A76FE08B}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30525DAE-B3B5-4D79-B3C0-9114C22B0E39}
+	EndGlobalSection
+EndGlobal

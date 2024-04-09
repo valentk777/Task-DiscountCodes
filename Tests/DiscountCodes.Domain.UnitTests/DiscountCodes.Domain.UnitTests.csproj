@@ -1,0 +1,10 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="..\..\shared.props" />
+    <Import Project="..\..\shared-tests.props" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Source\DiscountCodes.Domain\DiscountCodes.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
