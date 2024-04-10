@@ -1,4 +1,4 @@
-﻿namespace DiscountCodes.Application;
+﻿namespace DiscountCodes.Application.Models;
 
 public class GenerateResponse
 {
