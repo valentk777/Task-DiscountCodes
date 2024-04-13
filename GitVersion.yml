@@ -1,0 +1,4 @@
+mode: Mainline
+major-version-bump-message: 'major:'
+minor-version-bump-message: 'minor:'
+patch-version-bump-message: 'patch:'
