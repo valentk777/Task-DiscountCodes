@@ -175,10 +175,12 @@ jobs:
       ]
 
     steps:
-      - name: 🛒 Git checkout
+      - name: Git checkout
         uses: actions/checkout@v4
-
-      - name: 🏷️ Create tag and release
+        with:
+          fetch-depth: 0
+          
+      - name: Create tag and release
         uses: actions/create-release@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
