@@ -37,7 +37,7 @@ const DicountCodeValidator = () => {
         </Col>
         <Col sm={12}>
           <hr />
-          <Button variant='success' type='submit'>Generate</Button>
+          <Button variant='success' type='submit'>Validate</Button>
         </Col>
         <Col sm={12}>
           <hr />

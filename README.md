@@ -16,7 +16,7 @@ In case you want to build a REST communication entry point, well, you can do tha
 - BackEnd:
     * DotNet 8
     * UnitTests
-    * IntegrationTests
+    <!-- * IntegrationTests -->
     * Entity Framework
     * DDD
     * Logging
@@ -28,14 +28,35 @@ In case you want to build a REST communication entry point, well, you can do tha
     * CI/CD with GitHub Actions
     * MySql database
     * Automatic test runs
-    * SonarCloud automatic scan
+    <!-- * SonarCloud automatic scan -->
     * Swagger Documentation
-    * Postman Documentation
-    * Docker and docker compose
-    * Release as docker image to GitHub image storage
+    <!-- * Postman Documentation -->
+    <!-- * Docker and docker compose -->
+    <!-- * Release as docker image to GitHub image storage -->
     * EF migrations
 
 ## How to run the app?
+
+Option 1:
+
+Run dotnet application.
+
+Run UI 
+```
+cd UI
+npm run start
+```
+
+Run 
+```
+docker-compose up db
+```
+Add migrations
+```
+dotnet ef database update --startup-project Source/DiscountCodes.SignalR --project Source/DiscountCodes.Integrations
+```
+
+Option2 : (NOT WORKING)
 
 To run the application locally for testing, you can use a docker-compose file.
 For this, you need to have docker up and running (Docker Desktop or free option Rancher will work).
