@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
 WORKDIR /app
-EXPOSE 8080
+EXPOSE 11111
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 COPY . /Source
@@ -10,5 +10,4 @@ RUN dotnet publish -c Release -o /app './Source/DiscountCodes.SignalR/DiscountCo
 FROM base AS final
 WORKDIR /app
 COPY --from=build /app .
-ENV ASPNETCORE_URLS=http://+:8080
 ENTRYPOINT dotnet DiscountCodes.SignalR.dll

@@ -4,7 +4,7 @@ services:
     image: mysql:8.0
     restart: always
     environment:
-      MYSQL_DATABASE: "discount-codes"
+      MYSQL_DATABASE: "DiscountCodes"
       MYSQL_USER: "user"
       MYSQL_PASSWORD: "password"
       MYSQL_ROOT_PASSWORD: "password"
@@ -21,8 +21,17 @@ services:
   server:
     build:
       context: .
+    depends_on:
+    - db
+    environment:
+    - ASPNETCORE_URLS=http://+:11110
+    - ASPNETCORE_HTTPS_PORT=https://+:11111
+    - ASPNETCORE_ENVIRONMENT=Development
+    # - ASPNETCORE_Kestrel__Certificates__Default__Password=12345678
+    # - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     ports:
-      - "11111:8080"
+      - "11110:11110"
+      - "11111:11111"
       - "11111"
 
 # Names our volume

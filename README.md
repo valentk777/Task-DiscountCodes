@@ -43,6 +43,7 @@ For this, you need to have docker up and running (Docker Desktop or free option 
 In the CMD inside the main project repo, just run
 ```
 docker-compose up
+dotnet ef database update --startup-project Source/DiscountCodes.SignalR --project Source/DiscountCodes.Integrations
 ```
 
 Then open URL: http://localhost:3000/
@@ -52,3 +53,4 @@ Then open URL: http://localhost:3000/
 dotnet ef migrations add create-discount-code-table --startup-project Source/DiscountCodes.SignalR --project Source/DiscountCodes.Integrations
 dotnet ef database update --startup-project Source/DiscountCodes.SignalR --project Source/DiscountCodes.Integrations
 ```
+

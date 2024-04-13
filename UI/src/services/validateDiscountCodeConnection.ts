@@ -2,7 +2,7 @@ import * as signalR from "@microsoft/signalr";
 import { UseCodeResponse } from "../models/useCodeResponse";
 import { UseCodeRequest } from "../models/useCodeRequest";
 
-const URL = process.env.HUB_ADDRESS ?? "https://localhost:11111/hub";
+const URL = process.env.HUB_ADDRESS ?? "http://localhost:11110/hub";
 
 class Connector {
   private connection: signalR.HubConnection;
