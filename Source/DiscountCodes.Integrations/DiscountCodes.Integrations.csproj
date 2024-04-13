@@ -11,4 +11,8 @@
         <ProjectReference Include="..\DiscountCodes.Domain\DiscountCodes.Domain.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Repositories\" />
+    </ItemGroup>
+
 </Project>

@@ -5,11 +5,12 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNet.SignalR" Version="2.4.3" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.5" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DiscountCodes.Application\DiscountCodes.Application.csproj" />
-      <ProjectReference Include="..\DiscountCodes.Integrations\DiscountCodes.Integrations.csproj" />
+        <ProjectReference Include="..\DiscountCodes.Application\DiscountCodes.Application.csproj" />
+        <ProjectReference Include="..\DiscountCodes.Integrations\DiscountCodes.Integrations.csproj" />
     </ItemGroup>
-    
+
 </Project>

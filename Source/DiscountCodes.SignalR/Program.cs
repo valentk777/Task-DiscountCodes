@@ -1,26 +1,50 @@
+
+using DiscountCodes.Application.Extensions;
 using DiscountCodes.Integrations.Swagger;
-using DiscountCodes.SignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
+//TODO: move to resources and constants
 builder.Services.AddSignalR();
+
+builder.Services.AddAppService();
+
 builder.Services.AddControllers();
-//builder.Services.AddHttpLogging(options => _ = new HttpLoggingOptions());
+builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwagger();
-//builder.Services.AddHealthChecks();
+
+//builder.Services.AddCors(opt =>
+//{
+//    opt.AddPolicy("reactApp", builder =>
+//    {
+//        builder
+//        .AllowAnyMethod()
+//        .AllowAnyHeader()
+//         .SetIsOriginAllowed(origin => true)
+//        //.WithOrigins("http://localhost:3000")
+//        .AllowCredentials();
+//    });
+//});
 
 var app = builder.Build();
 
-
-//app.UseCookiePolicy();
-//app.UseHttpLogging();
-app.UseRouting();
 app.UseSwagger();
 app.UseSwaggerUI(options => options.DisplayRequestDuration());
+
+app.UseCors(x => x
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+    .SetIsOriginAllowed(origin => true) // allow any origin
+    .AllowCredentials()); // allow credentials
+
+app.UseHttpsRedirection();
+
+app.UseAuthorization();
+
 app.MapControllers();
 
-app.MapHub<DiscountHub>("/Code");
-//app.MapHealthChecks("heath");
+//app.MapHub<DiscountHub>("/hub");
+app.MapHub<DiscountHub>("/hub");
 
 app.Run();

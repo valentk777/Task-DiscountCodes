@@ -1,3 +1,3 @@
 export interface UseCodeResponse {
-  Result: number;
+  result: number;
 }

@@ -1,5 +1,5 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     
-    <Import Project="..\..\shared.props"/>
+    <Import Project="..\..\shared.props" />
 
 </Project>

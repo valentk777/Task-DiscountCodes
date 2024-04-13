@@ -1,3 +1,3 @@
 export interface GenerateResponse {
-  Result: boolean;
+  result: boolean;
 }

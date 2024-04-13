@@ -1,57 +1,38 @@
-﻿using DiscountCodes.Application.Models;
-using Microsoft.AspNetCore.SignalR;
-using SignalRSwaggerGen.Attributes;
+﻿//using DiscountCodes.Application.DiscountCode;
+//using DiscountCodes.Application.Models;
+//using Microsoft.AspNetCore.SignalR;
+//using SignalRSwaggerGen.Attributes;
 
-namespace DiscountCodes.SignalR.Hubs;
+//namespace DiscountCodes.SignalR.Hubs;
 
-[SignalRHub]
-public class DiscountHub : Hub
-{
-    public DiscountHub()
-    {
-    }
+//[SignalRHub]
+//public class DiscountHub : Hub
+//{
+//    private readonly ILogger<DiscountHub> _logger;
+//    private readonly IDiscountCodeService _discountCodeService;
 
-    public async Task<GenerateResponse> GenerateDiscountCode(int number, [SignalRHidden] CancellationToken ct = default)
-    {
+//    public DiscountHub(ILogger<DiscountHub> logger, IDiscountCodeService discountCodeService)
+//    {
+//        _logger = logger;
+//        _discountCodeService = discountCodeService;
+//    }
 
+//    public async Task GenerateDiscountCode(GenerateRequest request)
+//    {
+//        _logger.LogDebug($"Calling GenerateDiscountCode with parameters Count: {request.Count} and Length {request.Length}");
 
-        await Clients.All.SendAsync("ReceiveGenerateDiscountCodeResult", true, ct);
+//        var result = await _discountCodeService.GenerateDiscountCode(request);
 
-        return null;
-    }
+//        await Clients.All.SendAsync("generateDiscountCodeMessageReceived", result);
+//    }
 
-    public async Task<UseCodeResponse> UseDiscountCode(string code, [SignalRHidden] CancellationToken ct = default)
-    {
-        var response = new UseCodeResponse()
-        {
-            Result = 0
-        };
+//    //, [SignalRHidden] CancellationToken ct = default
+//    public async Task UseDiscountCode(UseCodeRequest request)
+//    {
+//        _logger.LogDebug($"Calling UseDiscountCode with parameters code: {request.Code}");
 
-        await Clients.All.SendAsync("ReceiveUseDiscountCodeResult", response, ct);
+//        var result = await _discountCodeService.UseDiscountCode(request);
 
-        return null;
-    }
-
-
-    //public async Task<GenerateResponse> GenerateDiscountCode(GenerateRequest request)
-    //{
-    //    var response = new GenerateResponse() {
-    //        Result = true };
-
-    //    await Clients.All.SendAsync("ReceiveGenerateDiscountCodeResult", response);
-
-    //    return null;
-    //}
-
-    //public async Task<UseCodeResponse> UseDiscountCode(UseCodeRequest request)
-    //{
-    //    var response = new UseCodeResponse()
-    //    {
-    //        Result = 0
-    //    };
-
-    //    await Clients.All.SendAsync("ReceiveUseDiscountCodeResult", response);
-
-    //    return null;
-    //}
-}
+//        await Clients.All.SendAsync("useDiscountCodeMessageReceived", result);
+//    }
+//}

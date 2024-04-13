@@ -1,2 +1,2 @@
-﻿namespace DiscountCodes.Domain.IntegrationTests;
+﻿namespace DiscountCodes.IntegrationTests;
 
