@@ -13,10 +13,9 @@ public class DiscountCodesDbContext : DbContext
 
     public DbSet<DiscountCodesTable> DiscountCodes { get; set; } = default!;
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder) => ConfigureUserTable(modelBuilder);
+    protected override void OnModelCreating(ModelBuilder modelBuilder) =>
+        ConfigureUserTable(modelBuilder);
 
-    internal static void ConfigureUserTable(ModelBuilder modelBuilder) => modelBuilder.Entity<DiscountCodesTable>(entity =>
-                                                                               {
-                                                                                   entity.ToTable(IntegrationConstants.DiscountCodesTable);
-                                                                               });
+    public static void ConfigureUserTable(ModelBuilder modelBuilder) =>
+        modelBuilder.Entity<DiscountCodesTable>(entity => entity.ToTable(IntegrationConstants.DiscountCodesTable));
 }

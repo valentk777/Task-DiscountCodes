@@ -5,13 +5,15 @@ using Microsoft.Extensions.Logging;
 
 namespace DiscountCodes.Application.DiscountCode;
 
-internal class DiscountCodeService : IDiscountCodeService
+public class DiscountCodeService : IDiscountCodeService
 {
     private readonly ILogger<DiscountCodeService> _logger;
     private readonly IDiscountCodesGenerator _codesGenerator;
     private readonly IDiscountCodesActivator _codesProvider;
 
-    public DiscountCodeService(ILogger<DiscountCodeService> logger, IDiscountCodesGenerator codesGenerator, IDiscountCodesActivator codesProvider)
+    public DiscountCodeService(ILogger<DiscountCodeService> logger, 
+        IDiscountCodesGenerator codesGenerator, 
+        IDiscountCodesActivator codesProvider)
     {
         _logger = logger;
         _codesGenerator = codesGenerator;
@@ -36,6 +38,7 @@ internal class DiscountCodeService : IDiscountCodeService
         try
         {
             await _codesProvider.GetDiscountCode(request.Code);
+
             return new UseCodeResponse() { Result = 1 };
         }
         catch (Exception exception)

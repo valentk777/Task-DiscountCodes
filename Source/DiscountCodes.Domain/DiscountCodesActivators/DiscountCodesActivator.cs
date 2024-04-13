@@ -20,11 +20,15 @@ public class DiscountCodesActivator : IDiscountCodesActivator
 
         if (discountCode is null)
         {
+            _logger.LogInformation("Cannot find provided code");
+
             throw new DomainValidationException("Cannot find provided code");
         }
 
         if (discountCode.IsUsed)
         {
+            _logger.LogInformation("Provided code has been used already");
+
             throw new DomainValidationException("Provided code has been used already");
         }
 
