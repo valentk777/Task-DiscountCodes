@@ -27,20 +27,20 @@ const DiscountCodeValidator = () => {
       <Row class='px-5 my-3'>
         <Col sm={12}>
           <h3 className='title'>
-            Use discount code
+            USE YOUR DISCOUNT CODE
           </h3>
         </Col>
         <Col sm={12}>
           <Form.Group>
-          <div className='micro-text'>Enter discount code</div>
-            <Form.Control className='input' placeholder='Discount code' onChange={(e) => setCode(e.target.value)} />
+            <div className='micro-text'>ENTER YOUR DISCOUNT CODE</div>
+            <Form.Control className='input' placeholder='CODE' onChange={(e) => setCode(e.target.value)} />
           </Form.Group>
         </Col>
         <Col sm={12}>
-          <Button  className='button' type='submit'>Validate</Button>
+          <Button className='submit' type='submit'>VALIDATE</Button>
         </Col>
         <Col sm={12}>
-          <h1>{validateCodeResponse.result === undefined ? "Not validated" : (validateCodeResponse.result === 0 ? "Your provided code is invalid" : "Your provided code is VALID!")}</h1>
+          <div className='result'>{validateCodeResponse.result === undefined ? "Not validated" : (validateCodeResponse.result === 0 ? "Your provided code is invalid" : "Your provided code is VALID!")}</div>
         </Col>
       </Row>
     </Form>

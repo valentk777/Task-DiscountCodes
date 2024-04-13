@@ -12,13 +12,15 @@ function App() {
           <Row>
             <Col>
               <h1 className='welcome font-weight-light'>
-                Welcome to discount code app
+                WELCOME TO DISCOUNT CODES APP!
               </h1>
             </Col>
           </Row>
           <DiscountCodeGenerator />
-          <hr />
           <DiscountCodeValidator />
+          <br/>
+          <br/>
+          <br/>
           <Row>
             <Col className='author'>
               <p>Author: <a href="https://www.linkedin.com/in/valentinaskaminskas">Valentinas Kaminskas</a></p>
