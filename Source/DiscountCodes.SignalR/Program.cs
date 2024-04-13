@@ -5,8 +5,6 @@ using DiscountCodes.Integrations.Swagger;
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
 
-//TODO: move to resources and constants
-
 builder.Services.AddSignalR();
 builder.Services.AddAppService();
 

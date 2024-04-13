@@ -11,8 +11,8 @@ public class DiscountCodeService : IDiscountCodeService
     private readonly IDiscountCodesGenerator _codesGenerator;
     private readonly IDiscountCodesActivator _codesProvider;
 
-    public DiscountCodeService(ILogger<DiscountCodeService> logger, 
-        IDiscountCodesGenerator codesGenerator, 
+    public DiscountCodeService(ILogger<DiscountCodeService> logger,
+        IDiscountCodesGenerator codesGenerator,
         IDiscountCodesActivator codesProvider)
     {
         _logger = logger;

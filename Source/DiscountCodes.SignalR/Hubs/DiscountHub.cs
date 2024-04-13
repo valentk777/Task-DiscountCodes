@@ -3,6 +3,8 @@ using DiscountCodes.Application.Models;
 using Microsoft.AspNetCore.SignalR;
 using SignalRSwaggerGen.Attributes;
 
+namespace DiscountCodes.SignalR.Hubs;
+
 [SignalRHub]
 public class DiscountHub : Hub
 {

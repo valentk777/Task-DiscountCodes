@@ -29,7 +29,7 @@ public class DiscountCodesGenerator : IDiscountCodesGenerator
         }
         catch (Exception exception)
         {
-            _logger.LogError("Issues generating code, {exception}", exception);
+            _logger.LogError(exception, "Issues generating code {Exception}", exception);
 
             return false;
         }
