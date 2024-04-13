@@ -1,6 +1,7 @@
 
 using DiscountCodes.Application.Extensions;
 using DiscountCodes.Integrations.Swagger;
+using DiscountCodes.SignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 var config = builder.Configuration;
