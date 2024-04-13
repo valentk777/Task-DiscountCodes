@@ -16,6 +16,9 @@ It is easy to scale and maintain, decoupled from integrations and communication 
 In case you want to build a REST communication entry point, well, you can do that without changing the actual domain.
 That is my key target.
 
+## Origin task
+[Requirements](https://github.com/valentk777/Task-DiscountCodes/blob/abf54571b6b68adac2466a048ec80de9dff6a6ac/Documentation/Original_Task.pdf)
+
 ## Features/Keywords:
 
 - FrontEnd/UI:
@@ -24,17 +27,16 @@ That is my key target.
 
   - DotNet 8
   - UnitTests
-  <!-- * IntegrationTests -->
-  - Entity Framework
+  - Entity Framework Core (EF)
   - DDD
   - Logging
+  <!-- * IntegrationTests -->
 
 - Integrations:
-
   - SignalR
   - MySql database
   - Docker and docker compose
-  - EF migrations
+  - EF Core migrations
 
 - CI/CD:
   - GitHub Actions
@@ -43,7 +45,7 @@ That is my key target.
   - Automatic versioning with GitVersion
   - Automatic release as docker image to GitHub image storage
   - Automatic git tag creation
-  - Swagger Documentation
+  - Swagger documentation
 
 ## How to run the app?
 
@@ -98,3 +100,4 @@ dotnet ef database update --startup-project Source/DiscountCodes.SignalR --proje
   <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures2.png' height="400" />
   <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures3.png' height="400" />
 </div>
+
