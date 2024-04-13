@@ -1,8 +1,30 @@
 version: "3"
 services:
-  discount-codes:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: "discount-codes"
+      MYSQL_USER: "user"
+      MYSQL_PASSWORD: "password"
+      MYSQL_ROOT_PASSWORD: "password"
+    ports:
+      - "3306:3306"
+    volumes:
+      - my-db:/var/lib/mysql
+  client:
+    build:
+      context: "./UI"
+    ports:
+      - "3000:80"
+      - "3000"
+  server:
     build:
       context: .
     ports:
-      - "11111:11111"
+      - "11111:8080"
       - "11111"
+
+# Names our volume
+volumes:
+  my-db:

@@ -1,6 +1,6 @@
 ﻿using DiscountCodes.Application.Models;
-using DiscountCodes.Domain.DiscountCodesGenerator;
-using DiscountCodes.Domain.DiscountCodesProvider;
+using DiscountCodes.Domain.DiscountCodesActivators;
+using DiscountCodes.Domain.DiscountCodesGenerators;
 using Microsoft.Extensions.Logging;
 
 namespace DiscountCodes.Application.DiscountCode;
@@ -9,9 +9,9 @@ internal class DiscountCodeService : IDiscountCodeService
 {
     private readonly ILogger<DiscountCodeService> _logger;
     private readonly IDiscountCodesGenerator _codesGenerator;
-    private readonly IDiscountCodesProvider _codesProvider;
+    private readonly IDiscountCodesActivator _codesProvider;
 
-    public DiscountCodeService(ILogger<DiscountCodeService> logger, IDiscountCodesGenerator codesGenerator, IDiscountCodesProvider codesProvider)
+    public DiscountCodeService(ILogger<DiscountCodeService> logger, IDiscountCodesGenerator codesGenerator, IDiscountCodesActivator codesProvider)
     {
         _logger = logger;
         _codesGenerator = codesGenerator;
@@ -22,7 +22,7 @@ internal class DiscountCodeService : IDiscountCodeService
     {
         _logger.LogInformation("Generating discount codes");
 
-        var result = await _codesGenerator.GenerateCode(request.Count, request.Length);
+        var result = await _codesGenerator.GenerateCodes(request.Count, request.Length);
 
         _logger.LogInformation("Discount codes generated");
 
@@ -33,8 +33,16 @@ internal class DiscountCodeService : IDiscountCodeService
     {
         _logger.LogInformation("Trying to use discount code");
 
-        var discountCode = await _codesProvider.GetDiscountCode(request.Code);
+        try
+        {
+            await _codesProvider.GetDiscountCode(request.Code);
+            return new UseCodeResponse() { Result = 1 };
+        }
+        catch (Exception exception)
+        {
+            _logger.LogError("Error in using discount code. {exception}", exception);
 
-        return new UseCodeResponse() { Result = discountCode.Code };
+            return new UseCodeResponse() { Result = 0 };
+        }
     }
 }

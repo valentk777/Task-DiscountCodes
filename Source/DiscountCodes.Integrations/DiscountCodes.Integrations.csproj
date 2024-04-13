@@ -3,16 +3,20 @@
     <Import Project="..\..\shared.props" />
 
     <ItemGroup>
+        <PackageReference Include="Serilog.Extensions.Logging" Version="8.0.0" />
         <PackageReference Include="SignalRSwaggerGen" Version="4.5.0" />
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.3"/>
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="8.0.2"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.3">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 
     <ItemGroup>
         <ProjectReference Include="..\DiscountCodes.Domain\DiscountCodes.Domain.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Repositories\" />
     </ItemGroup>
 
 </Project>

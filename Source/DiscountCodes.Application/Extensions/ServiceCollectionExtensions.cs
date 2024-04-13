@@ -1,7 +1,7 @@
 ﻿using DiscountCodes.Application.DiscountCode;
-using DiscountCodes.Domain.DiscountCodesGenerator;
-using DiscountCodes.Domain.DiscountCodesProvider;
-using Microsoft.Extensions.Configuration;
+using DiscountCodes.Domain.DiscountCodesActivators;
+using DiscountCodes.Domain.DiscountCodesGenerators;
+using DiscountCodes.Integrations.Repositories.Registrations;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DiscountCodes.Application.Extensions;
@@ -12,6 +12,7 @@ public static class ServiceCollectionExtensions
     {
         serviceCollection.AddTransient<IDiscountCodeService, DiscountCodeService>();
         serviceCollection.AddTransient<IDiscountCodesGenerator, DiscountCodesGenerator>();
-        serviceCollection.AddTransient<IDiscountCodesProvider, DiscountCodesProvider>();
+        serviceCollection.AddTransient<IDiscountCodesActivator, DiscountCodesActivator>();
+        serviceCollection.AddDiscountCodesRepository();
     }
 }
