@@ -7,9 +7,9 @@ import { GenerateRequest } from '../models/generateRequest';
 
 const DiscountCodeGenerator = () => {
   const { generateDiscountCode, events } = Connector();
-  const [generateResponse, setGenerateResponse] = useState({result: false} as GenerateResponse);
+  const [generateResponse, setGenerateResponse] = useState({} as GenerateResponse);
 
-  const [count, setCount] = useState("");
+  const [count, setCount] = useState(0);
   const [length, setLength] = useState("");
 
   useEffect(() => {
@@ -18,30 +18,31 @@ const DiscountCodeGenerator = () => {
 
   const onSubmit = (e: { preventDefault: () => void; }) => {
     e.preventDefault();
-    generateDiscountCode({ count: parseInt(count, 10), length: parseInt(length, 10) } as GenerateRequest);
+    generateDiscountCode({ count: count, length: parseInt(length, 10) } as GenerateRequest);
   }
 
   return (
     <Form onSubmit={onSubmit}>
       <Row class='px-5 my-3'>
         <Col sm={12}>
-          <h3 className='font-weight-light'>
+          <h3 className='title'>
             Generate discount code
           </h3>
         </Col>
         <Col sm={12}>
           <Form.Group>
-            <Form.Control type='number' placeholder='Count' onChange={(e) => setCount(e.target.value)} />
-            <Form.Control type='number' placeholder='Length' onChange={(e) => setLength(e.target.value)} />
+            <div className='micro-text'>Select count</div>
+            <Button className='button' onClick={() => setCount(7)} style={count === 7 ? {backgroundColor: '#234987'} : {}}>7</Button>
+            <Button className='button' onClick={() => setCount(8)} style={count === 8 ? {backgroundColor: '#234987'} : {}}>8</Button>
+            <div className='micro-text'>Select lenght</div>
+            <Form.Control className='input' type='number' placeholder='Length' onChange={(e) => setLength(e.target.value)} />
           </Form.Group>
         </Col>
         <Col sm={12}>
-          <hr />
-          <Button variant='success' type='submit'>Generate</Button>
+          <Button className='button' variant='success' type='submit'>Generate</Button>
         </Col>
         <Col sm={12}>
-          <hr />
-          <h1>{generateResponse.result.toString()}</h1>
+          <h1>{generateResponse.result === undefined ? "Codes was not generated" : (generateResponse.result ? "Codes generated SUCCESSFULLY" : "Issues generating codes")}</h1>
         </Col>
       </Row>
     </Form>)
