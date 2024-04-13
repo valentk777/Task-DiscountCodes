@@ -1,4 +1,10 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=valentk777_Task-DiscountCodes&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=valentk777_Task-DiscountCodes)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=valentk777_Task-DiscountCodes&metric=bugs)](https://sonarcloud.io/summary/new_code?id=valentk777_Task-DiscountCodes)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=valentk777_Task-DiscountCodes&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=valentk777_Task-DiscountCodes)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=valentk777_Task-DiscountCodes&metric=security_rating)](https://sonarcloud.io/summary/new_code?id=valentk777_Task-DiscountCodes)
+
 # Task-DiscountCodes
+
 This is a solution for a task to generate a discount code
 Original task/requirements:
 https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Original_Task.pdf
