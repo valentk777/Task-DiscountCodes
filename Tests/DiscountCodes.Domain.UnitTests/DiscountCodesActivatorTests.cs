@@ -40,7 +40,7 @@ public class DiscountCodesActivatorTests
     }
 
     [Test]
-    public async Task GetDiscountCode_WhenCodeDoesNotExist_ThrowsDomainValidationException()
+    public void GetDiscountCode_WhenCodeDoesNotExist_ThrowsDomainValidationException()
     {
         // Arrange
         var invalidCode = "INVALID_CODE";
@@ -55,7 +55,7 @@ public class DiscountCodesActivatorTests
     }
 
     [Test]
-    public async Task GetDiscountCode_WhenCodeIsAlreadyUsed_ThrowsDomainValidationException()
+    public void GetDiscountCode_WhenCodeIsAlreadyUsed_ThrowsDomainValidationException()
     {
         // Arrange
         var code = "USED_CODE";

@@ -1,5 +1,15 @@
 {
   "compilerOptions": {
+    // -- start section
+    // If you add it here, you now allow to have all components starting from this base path and you do NOT need ../
+    "rootDir": ".",
+    "baseUrl": "./src/",
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ]
+    },
+    // -- end section
     "target": "es5",
     "lib": [
       "dom",
@@ -21,6 +31,6 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
-  ]
+    "./src"
+  ],
 }

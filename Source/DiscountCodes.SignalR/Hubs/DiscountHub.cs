@@ -19,7 +19,7 @@ public class DiscountHub : Hub
 
     public async Task GenerateDiscountCode(GenerateRequest request)
     {
-        _logger.LogDebug($"Calling GenerateDiscountCode with parameters Count: {request.Count} and Length {request.Length}");
+        _logger.LogDebug("Calling GenerateDiscountCode with parameters Count: {Count} and Length {Length}", request.Count, request.Length);
 
         var result = await _discountCodeService.GenerateDiscountCode(request);
 
@@ -28,7 +28,7 @@ public class DiscountHub : Hub
 
     public async Task ValidateDiscountCode(UseCodeRequest request)
     {
-        _logger.LogDebug($"Calling UseDiscountCode with parameters code: {request.Code}");
+        _logger.LogDebug("Calling UseDiscountCode with parameters code: {Code}", request.Code);
 
         var result = await _discountCodeService.UseDiscountCode(request);
 

@@ -1,36 +1,20 @@
 body {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-image: url("https://images.pexels.com/photos/1509534/pexels-photo-1509534.jpeg?w=2100");
+  font-family: "Georgia";
+  background: url("assets/img/background.png");
+  background-size: cover;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: rgb(255, 255, 255);
   text-align: center;
-  font-family: 'Lucida Console';
 }
 
 .app {
-  margin-right: 20%;
-  margin-left: 20%;
-  margin-top: 70px;
+  min-height: 100%;
+  justify-content: center;
 }
 
-.container {
-  background-color: rgba(155, 155, 155, 0.9);
-  border-radius: 50px;
-}
-
-.welcome {
-  color: #234987;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.author {
-  height: 100px;
-  text-align: right;
-  padding-top: 10px;
-  padding-right: 7%;
-  color: #234987;
-  background-color: rgba(155, 155, 155, 0.9);
-  border-bottom-right-radius: 50px;
-  border-bottom-left-radius: 50px;
+a {
+  color: rgb(255, 255, 255);
 }

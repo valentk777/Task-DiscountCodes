@@ -43,7 +43,7 @@ public class DiscountCodeService : IDiscountCodeService
         }
         catch (Exception exception)
         {
-            _logger.LogError("Error in using discount code. {exception}", exception);
+            _logger.LogError(exception, "Error in using discount code. {exception}", exception);
 
             return new UseCodeResponse() { Result = 0 };
         }

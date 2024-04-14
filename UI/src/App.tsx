@@ -1,34 +1,19 @@
-import './App.css';
-import { Container, Col, Row } from "react-bootstrap";
-import DiscountCodeValidator from './components/discountCodeValidator';
-import DiscountCodeGenerator from './components/discountCodeGenerator';
+import "App.css";
+
+import Footer from "components/footer/footer";
+import Header from "components/header/header";
+import Home from "pages/Home";
 
 function App() {
-
   return (
-    <div className="app">
-      <main>
-        <Container>
-          <Row>
-            <Col>
-              <h1 className='welcome font-weight-light'>
-                WELCOME TO DISCOUNT CODES APP!
-              </h1>
-            </Col>
-          </Row>
-          <DiscountCodeGenerator />
-          <DiscountCodeValidator />
-          <br/>
-          <br/>
-          <br/>
-          <Row>
-            <Col className='author'>
-              <p>Author: <a href="https://www.linkedin.com/in/valentinaskaminskas">Valentinas Kaminskas</a></p>
-              <p><a href="mailto:valentk777@gmail.com">valentk777@gmail.com</a></p>
-            </Col>
-          </Row>
-        </Container>
-      </main>
+    <div id="background" className="background">
+      <Header title={"WELCOME TO DISCOUNT CODES APP!"} />
+      <div className="app">
+        <main>
+          <Home />
+        </main>
+      </div>
+      <Footer />
     </div>
   );
 }

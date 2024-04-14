@@ -4,7 +4,6 @@ using DiscountCodes.Integrations.Swagger;
 using DiscountCodes.SignalR.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
-var config = builder.Configuration;
 
 builder.Services.AddSignalR();
 builder.Services.AddAppService();

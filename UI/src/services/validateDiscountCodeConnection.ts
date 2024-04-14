@@ -1,11 +1,12 @@
 import * as signalR from "@microsoft/signalr";
-import { UseCodeResponse } from "../models/useCodeResponse";
-import { UseCodeRequest } from "../models/useCodeRequest";
+import { UseCodeResponse } from "models/useCodeResponse";
+import { UseCodeRequest } from "models/useCodeRequest";
 
 const URL = process.env.HUB_ADDRESS ?? "https://localhost:11111/hub";
 
 class Connector {
   private connection: signalR.HubConnection;
+
   public events: (
     onValidateDiscountCodeMessageReceived: (response: UseCodeResponse) => void
   ) => void;

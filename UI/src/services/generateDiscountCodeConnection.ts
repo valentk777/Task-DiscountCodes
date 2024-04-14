@@ -1,11 +1,12 @@
 import * as signalR from "@microsoft/signalr";
-import { GenerateResponse } from "../models/generateResponse";
-import { GenerateRequest } from "../models/generateRequest";
+import { GenerateResponse } from "models/generateResponse";
+import { GenerateRequest } from "models/generateRequest";
 
 const URL = process.env.HUB_ADDRESS ?? "https://localhost:11111/hub";
 
 class Connector {
   private connection: signalR.HubConnection;
+
   public events: (
     onGenerateDiscountCodeMessageReceived: (response: GenerateResponse) => void
   ) => void;
@@ -22,12 +23,9 @@ class Connector {
     this.connection.start().catch((err) => document.write(err));
 
     this.events = (onGenerateDiscountCodeMessageReceived) => {
-      this.connection.on(
-        "generateDiscountCodeMessageReceived",
-        (response: GenerateResponse) => {
-          onGenerateDiscountCodeMessageReceived(response);
-        }
-      );
+      this.connection.on("generateDiscountCodeMessageReceived", (response: GenerateResponse) => {
+        onGenerateDiscountCodeMessageReceived(response);
+      });
     };
   }
 
