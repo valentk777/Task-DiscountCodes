@@ -96,7 +96,7 @@ dotnet ef database update --startup-project Source/DiscountCodes.SignalR --proje
 ## What is inside?
 
 <div align="center">
-  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/1197c0e771a6adad550ddaa7873409958dbb22da/Documentation/Pictures1.png' height="400" />
+  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures1.png' height="400" />
   <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures2.png' height="400" />
 </div>
 
