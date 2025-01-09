@@ -3,11 +3,9 @@
     // -- start section
     // If you add it here, you now allow to have all components starting from this base path and you do NOT need ../
     "rootDir": ".",
-    "baseUrl": "./src/",
+    "baseUrl": ".",
     "paths": {
-      "~/*": [
-        "./src/*"
-      ]
+      "@/*": ["./src/*"]
     },
     // -- end section
     "target": "es5",

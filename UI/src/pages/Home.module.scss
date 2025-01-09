@@ -1,0 +1,31 @@
+.container {
+    @apply min-h-screen bg-gradient-to-b from-zinc-950 to-black text-zinc-100;
+  }
+  
+  .content {
+    @apply container mx-auto p-6 max-w-4xl;
+  }
+  
+  .tabs {
+    @apply space-y-6;
+  }
+  
+  .tabsList {
+    @apply grid w-full grid-cols-2 bg-zinc-800/50 border border-zinc-700;
+  }
+  
+  .tabsTrigger {
+    @apply text-zinc-400;
+  
+    &[data-state="active"] {
+      @apply bg-gradient-to-r from-purple-500 to-blue-500 text-white;
+  
+      &:last-child {
+        @apply from-blue-500 to-cyan-500;
+      }
+    }
+  }
+  
+  .tabsContent {
+    @apply mt-6;
+  }

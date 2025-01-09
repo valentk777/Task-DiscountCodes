@@ -1,6 +1,6 @@
 import * as signalR from "@microsoft/signalr";
-import { GenerateResponse } from "models/generateResponse";
-import { GenerateRequest } from "models/generateRequest";
+import { GenerateResponse } from "src/models/generateResponse";
+import { GenerateRequest } from "src/models/generateRequest";
 
 const URL = process.env.HUB_ADDRESS ?? "https://localhost:11111/hub";
 

@@ -1,6 +1,6 @@
 import * as signalR from "@microsoft/signalr";
-import { UseCodeResponse } from "models/useCodeResponse";
-import { UseCodeRequest } from "models/useCodeRequest";
+import { UseCodeResponse } from "src/models/useCodeResponse";
+import { UseCodeRequest } from "src/models/useCodeRequest";
 
 const URL = process.env.HUB_ADDRESS ?? "https://localhost:11111/hub";
 

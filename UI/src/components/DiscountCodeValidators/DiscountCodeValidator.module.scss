@@ -1,0 +1,71 @@
+.card {
+    @apply w-full bg-gradient-to-br from-zinc-900 via-zinc-800 to-zinc-900 border-zinc-700 shadow-xl;
+  }
+  
+  .cardHeader {
+    @apply border-b border-zinc-700/50;
+  }
+  
+  .cardTitle {
+    @apply flex items-center gap-2 text-zinc-100;
+  }
+  
+  .icon {
+    @apply w-5 h-5 text-blue-400;
+  }
+  
+  .cardDescription {
+    @apply text-zinc-400;
+  }
+  
+  .cardContent {
+    @apply mt-6;
+  }
+  
+  .form {
+    @apply space-y-6;
+  }
+  
+  .inputGroup {
+    @apply space-y-2;
+  }
+  
+  .label {
+    @apply text-sm font-medium mb-2 block text-zinc-300;
+  }
+  
+  .input {
+    @apply uppercase bg-zinc-800/50 border-zinc-700 text-zinc-100 
+    placeholder:text-zinc-500 focus:border-blue-500 focus:ring-blue-500;
+  }
+  
+  .submitButton {
+    @apply w-full bg-gradient-to-r from-blue-500 to-cyan-500 
+    hover:from-blue-600 hover:to-cyan-600 text-white 
+    shadow-lg shadow-blue-500/20;
+  }
+  
+  .buttonIcon {
+    @apply w-4 h-4 ml-2;
+  }
+  
+  .alert {
+    @apply border;
+  
+    &.successAlert {
+      @apply bg-emerald-500/10 border-emerald-500/50 text-emerald-300;
+    }
+  
+    &.errorAlert {
+      @apply bg-red-500/10 border-red-500/50 text-red-300;
+    }
+  }
+  
+  .alertTitle {
+    @apply flex items-center;
+  }
+  
+  .alertIcon {
+    @apply w-4 h-4 mr-2;
+  }
+  

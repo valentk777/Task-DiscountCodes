@@ -1,13 +1,11 @@
-import "App.css";
-
-import Footer from "components/footer/footer";
-import Header from "components/header/header";
-import Home from "pages/Home";
+import Footer from "src/components/footer/footer";
+import Header from "src/components/header/header";
+import Home from "src/pages/Home";
 
 function App() {
   return (
     <div id="background" className="background">
-      <Header title={"WELCOME TO DISCOUNT CODES APP!"} />
+      {/* <Header title={"WELCOME TO DISCOUNT CODES APP!"} /> */}
       <div className="app">
         <main>
           <Home />
