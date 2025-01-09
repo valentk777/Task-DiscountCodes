@@ -1,6 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import DiscountCodeGenerator from "@/components/discountCodeGenerators/DiscountCodeGenerator";
-import DiscountCodeValidator from "@/components/discountCodeValidators/DiscountCodeValidator";
+import DiscountCodeGenerator from "../components/DiscountCodeGenerators/DiscountCodeGenerator";
+import DiscountCodeValidator from "../components/DiscountCodeValidators/DiscountCodeValidator";
 
 const Home = () => {
   const generatorConnector = {
