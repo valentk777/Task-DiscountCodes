@@ -30,7 +30,7 @@ class Connector {
   }
 
   public generateDiscountCode = (request: GenerateRequest) => {
-    this.connection.send("generateDiscountCode", request).then((response) => {
+    this.connection.send("generateDiscountCode", request).then((_) => {
       console.log("sent");
     });
   };

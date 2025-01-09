@@ -30,7 +30,7 @@ class Connector {
   }
 
   public validateDiscountCode = (request: UseCodeRequest) => {
-    this.connection.send("validateDiscountCode", request).then((response) => {
+    this.connection.send("validateDiscountCode", request).then((_) => {
       console.log("sent");
     });
   };
