@@ -16,6 +16,11 @@ It is easy to scale and maintain, decoupled from integrations and communication 
 In case you want to build a REST communication entry point, well, you can do that without changing the actual domain.
 That is my key target.
 
+<div align="center">
+  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures1.png' height="400" />
+  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures2.png' height="400" />
+</div>
+
 ## Origin task
 [Requirements](https://github.com/valentk777/Task-DiscountCodes/blob/abf54571b6b68adac2466a048ec80de9dff6a6ac/Documentation/Original_Task.pdf)
 
@@ -96,11 +101,6 @@ dotnet ef database update --startup-project Source/DiscountCodes.SignalR --proje
 ## What is inside?
 
 <div align="center">
-  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures1.png' height="400" />
-  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures2.png' height="400" />
-</div>
-
-<div align="center">
-  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures3.png' height="400" />
-  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/e8da5915dfbff5c69947be3c4696df3cd6c3afb3/Documentation/Pictures4.png' height="400" />
+  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures3.png' height="400" />
+  <img alt='screen' src='https://github.com/valentk777/Task-DiscountCodes/blob/main/Documentation/Pictures4.png' height="400" />
 </div>
